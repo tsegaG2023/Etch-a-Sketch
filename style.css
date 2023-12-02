@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.child {
+  flex: 1;
+  /* justify-content: center; */
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  min-width: 16px;
+  max-width: 16px;
+  height: 16px;
+}
+
+.child:hover {
+  /* background-color: blue; */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  height: auto;
+}
