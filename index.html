@@ -7,57 +7,18 @@
     <title>Document</title>
   </head>
   <body>
-    <button class="create-grid">Create</button>
-    <div class="container"></div>
-    <script>
-      const create_grid = document.querySelector(".create-grid");
+    <div class="mainContainer">
+      <div class="menu">
+        <div class="logo">DT-Canvas</div>
+        <li class="home">Home</li>
+        <li class="create-grid">Create Grid</li>
+        <li class="signup">Sign up</li>
+        <li>Login</li>
+      </div>
 
-      create_grid.addEventListener("click", function () {
-        const container = document.querySelector(".container");
-        container.textContent = "";
-        let numberOfGrids = 100;
-        numberOfGrids = prompt("Enter the number of grids?");
-        if (numberOfGrids > 1000) {
-          return alert("Please enter a number less than 1000");
-        }
+      <div class="container"></div>
+    </div>
 
-        for (let i = 0; i < numberOfGrids; i++) {
-          const div = document.createElement("div");
-          div.setAttribute("id", `div${i}`);
-          div.classList.add(`child`);
-          div.classList.add(`div+${i}`);
-          container.appendChild(div);
-        }
-        const childAll = document.querySelectorAll(".child");
-        childAll.forEach((el) => {
-          el.addEventListener("mousemove", function (e) {
-            const childEle = document.getElementById(e.target.id);
-            const style = window.getComputedStyle(childEle);
-            const rgb = style
-              .getPropertyValue("background-color")
-              .match(/\d+/g);
-            console.log(rgb);
-            console.log(rgb[2]);
-
-            let newRedValue = rgb[0] - Math.floor(Math.random() * 100) + 1;
-            let newGreenValue = rgb[1] - Math.floor(Math.random() * 100) + 1;
-            let newBlueValue = rgb[2] - 5.5;
-            const newRGB = constructRGB(
-              newRedValue,
-              newGreenValue,
-              newBlueValue
-            );
-            console.log(newRGB);
-            childEle.setAttribute("style", `background-color:${newRGB};`);
-          });
-        });
-      });
-
-      function constructRGB(red, green, blue) {
-        return `rgb(${red},${green},${blue})`;
-      }
-      const clickEvent = new Event("click");
-      create_grid.dispatchEvent(clickEvent);
-    </script>
+    <script src="script.js" defer></script>
   </body>
 </html>

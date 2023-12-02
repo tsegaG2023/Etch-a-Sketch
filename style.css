@@ -7,7 +7,7 @@
   flex: 1;
   /* justify-content: center; */
   background-color: rgb(255, 255, 255);
-  border: 1px solid black;
+  border: 1px solid rgb(114, 110, 110);
   min-width: 16px;
   max-width: 16px;
   height: 16px;
@@ -18,8 +18,62 @@
 }
 
 .container {
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   width: 900px;
   height: auto;
+  /* border: 0.5px solid blue; */
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightblue;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  margin-bottom: 20px;
+}
+li {
+  list-style: none;
+}
+.home {
+  margin-right: auto;
+}
+/* .security {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+} */
+.home > li {
+  padding: 15px;
+}
+.signup {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+body {
+  background-color: aquamarine;
+  /* padding: 20px; */
+}
+/* .mainContainer {
+  display: flex;
+  justify-content: center;
+} */
+button {
+  background-color: lightcoral;
+  color: black;
+  padding: 7px;
+  border-radius: 10px;
+}
+.logo {
+  padding-right: 15px;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+.create-grid {
+  cursor: pointer;
 }
